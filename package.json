@@ -1,0 +1,17 @@
+{
+  "name": "smart-industrial-monitoring",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SMTP alarm notification API for the Smart Industrial Monitoring dashboard",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "nodemailer": "^10.0.15"
+  }
+}
