@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SMART INDUSTRIAL MONITORING</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
 </head>
@@ -46,5 +46,5 @@
 <section id="settings" class="page"><h2>Settings</h2><div class="panel form"><p class="muted">Need a free private broker? Create a HiveMQ Cloud broker, then enter the secure WebSocket URL from your cluster below. You can paste the hostname alone; HiveMQ Cloud settings are filled in automatically. <a href="https://www.hivemq.com/mqtt-cloud-broker/" target="_blank" rel="noopener noreferrer">Get a free HiveMQ Cloud broker</a>.</p><label>MQTT WebSocket URL<input id="mqttUrl" type="text" autocomplete="url" placeholder="cluster-id.s1.eu.hivemq.cloud or wss://cluster-id.s1.eu.hivemq.cloud:8884/mqtt"></label><label>Username<input id="mqttUser" autocomplete="username"></label><label>Password<input id="mqttPass" type="password" autocomplete="current-password"></label><label>Data Topic<input id="dataTopic" value="industrial/machine01/sensors/data"></label><label>Status Topic<input id="statusTopic" value="industrial/machine01/status"></label><p class="muted">The MQTT URL, username and topics are saved in this browser; the password is not. SW-420 is a digital detector: send vibration as 1 (detected) or 0 (clear).</p><div class="thresholds"><label>DS18B20 Temp Warning<input id="tw" type="number" value="60"></label><label>DS18B20 Temp Critical<input id="tc" type="number" value="80"></label><label>ACS712 Current Warning<input id="cw" type="number" value="6"></label><label>ACS712 Current Critical<input id="cc" type="number" value="8"></label></div><label>Alarm email backend URL<input id="emailApiUrl" type="url" placeholder="https://your-alarm-api.example.com"></label><p class="muted">The backend sends email for each new warning or critical alarm. Configure SMTP credentials on the backend, never in this page.</p><button id="connectBtn">Connect MQTT</button><button id="disconnectBtn">Disconnect</button><p id="mqttMessage" class="muted" role="status" aria-live="polite">Enter your broker WebSocket URL to connect.</p></div></section>
 <section id="logs" class="page"><h2>System Logs</h2><label class="log-date">Log date<input id="logDate" type="date"></label><p id="logStorageMessage" class="muted" role="status" aria-live="polite">Daily logs are saved on this browser.</p><div id="logList" class="logs"></div></section>
 </main></div>
-<script src="js/app.js"></script>
+<script src="app.js"></script>
 </body></html>
